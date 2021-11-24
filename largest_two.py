@@ -4,6 +4,7 @@ def largest_two(A):
     my_max,second = second,my_max
 
   for idx in range(2, len(A)):
+    # ここがTrueのときに一番計算回数が少なくなる
     if my_max < A[idx]:
       my_max,second = A[idx],my_max
     elif second < A[idx]:
@@ -29,3 +30,5 @@ def mutable_two(A):
   second = max(A)                             
   A.insert(idx, my_max)                       
   return (my_max, second)
+
+print(largest_two([1, 2, 3, 4, 5, 6]))
